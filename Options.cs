@@ -81,7 +81,8 @@ namespace GoodMerge {
             TotalRAM=(int)(ms.dwTotalPhys/1024/1024)+1;
 
             XmlDocument xd= new XmlDocument();
-            XmlValidatingReader xvr = new XmlValidatingReader(new XmlTextReader(Application.StartupPath+"\\Settings.xml"));
+            var readerSettings = new XmlReaderSettings { ProhibitDtd = false, ValidationType = ValidationType.DTD };
+            var xvr = XmlReader.Create(Path.Combine(Application.StartupPath, "Settings.xml"), readerSettings);
             try { xd.Load(xvr); }
             catch (Exception e) {
                 MessageBox.Show(e.Message.Replace(" An error occurred at file:///", "\nFile: ").Replace(", (", "\nLine, Column: ("), "GoodMerge - XML Loading Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -159,7 +160,7 @@ namespace GoodMerge {
             if (OutputFolders.Contains(SetName)) OutputFolder = OutputFolders[SetName].ToString();
 
             xd = new XmlDocument();
-            xvr = new XmlValidatingReader(new XmlTextReader(Application.StartupPath+"\\Languages.xml"));
+            xvr = XmlReader.Create(Path.Combine(Application.StartupPath, "Languages.xml"), readerSettings);
             try { xd.Load(xvr); }
             catch (Exception e) {
                 MessageBox.Show(e.Message.Replace(" An error occurred at file:///", "\nFile: ").Replace(", (", "\nLine, Column: ("), "GoodMerge - XML Loading Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -231,7 +232,8 @@ namespace GoodMerge {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
             XmlDocument xd= new XmlDocument();
-            XmlValidatingReader xvr = new XmlValidatingReader(new XmlTextReader(Application.StartupPath+"\\Settings.xml"));
+            var readerSettings = new XmlReaderSettings { ProhibitDtd = false, ValidationType = ValidationType.DTD };
+            var xvr = XmlReader.Create(Path.Combine(Application.StartupPath, "Settings.xml"), readerSettings);
             try { xd.Load(xvr); }
             catch (Exception e) {
                 MessageBox.Show(e.Message.Replace(" An error occurred at file:///", "\nFile: ").Replace(", (", "\nLine, Column: ("), "GoodMerge - XML Saving Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

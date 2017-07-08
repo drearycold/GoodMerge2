@@ -167,7 +167,8 @@ namespace GoodMerge {
 
             // Attempt to load the document.
             xd = new XmlDocument();
-            XmlValidatingReader tempxvr = new XmlValidatingReader(new XmlTextReader(file.FullName));
+            var readerSettings = new XmlReaderSettings { ProhibitDtd = false, ValidationType = ValidationType.DTD };
+            var tempxvr = XmlReader.Create(file.FullName, readerSettings);
             try { xd.Load(tempxvr); }
             catch (Exception e) { doError("XML loading error.\n"+e.Message.Replace(" An error occurred at file:///", "\nFile: ").Replace(", (", "\nLine, Column: (")); return; }
             finally { tempxvr.Close(); }
