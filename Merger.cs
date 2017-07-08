@@ -707,12 +707,13 @@ namespace GoodMerge {
             #endregion
         }
 
+        /// <summary>
+        /// Return a string that corresponds to the passed string without any flags attached.
+        /// Takes into account various special settings based on the ROM set being scanned.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         private string StripHackFlags(string name) {
-            /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            / StripFlags: return a string that corresponds to the passed string
-            / without any flags attached. Takes into account various special
-            / settings based on the ROM set being scanned.
-            /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
             int flagsStart=name.Length;
             Match m;
             foreach (Regex re in HackFlags) {
@@ -722,12 +723,13 @@ namespace GoodMerge {
             return name.Substring(0, flagsStart);
         }
 
+        /// <summary>
+        /// Return a string that corresponds to the passed string without any flags attached.
+        /// Takes into account various special settings based on the ROM set being scanned.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         private string StripFlags(string name) {
-            /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            / StripFlags: return a string that corresponds to the passed string
-            / without any flags attached. Takes into account various special
-            / settings based on the ROM set being scanned.
-            /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
             int flagsStart=name.Length;
             string stripped;
             Match m;
@@ -746,11 +748,12 @@ namespace GoodMerge {
             return stripped;
         }
 
+        /// <summary>
+        /// Adds the specified clone to the appropriate hash table with the specified parent.
+        /// </summary>
+        /// <param name="parent"></param>
+        /// <param name="clone"></param>
         private void AddClone(string parent, string clone) {
-            /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-            / AddClone: Adds the specified clone to the appropriate hash table
-            / with the specified parent.
-            /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
             if (parent.Equals(clone)) return;
             if (explicitClones.Contains(clone)) {
                 if (!explicitClones[clone].ToString().ToLower().Equals(parent.ToLower())) {
