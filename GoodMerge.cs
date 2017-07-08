@@ -19,6 +19,7 @@ namespace GoodMerge {
                 MessageBox.Show(options.Strings[1], options.Strings[0]+" - "+options.Strings[0], MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            Control.CheckForIllegalCrossThreadCalls = false;
             options = new Options();
             if (!options.Initialize()) return;
             Start(args);
