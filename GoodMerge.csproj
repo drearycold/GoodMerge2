@@ -7,7 +7,7 @@
     <ProjectGuid>{F1A57544-389B-49D8-803B-DA08769B0C97}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>GoodMerge.ico</ApplicationIcon>
+    <ApplicationIcon>Icons\GoodMerge.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>GoodMerge</AssemblyName>
@@ -139,27 +139,23 @@
     <Compile Include="SettingsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Blank.ico" />
-    <EmbeddedResource Include="Deutsch.ico" />
-    <EmbeddedResource Include="Down.ico" />
-    <EmbeddedResource Include="English.ico" />
-    <EmbeddedResource Include="Español.ico" />
-    <EmbeddedResource Include="Français.ico" />
-    <EmbeddedResource Include="GoodMerge.ico" />
-    <EmbeddedResource Include="Svenska.ico" />
-    <EmbeddedResource Include="Up.ico" />
-    <EmbeddedResource Include="简体中文.ico" />
-    <EmbeddedResource Include="繁體中文.ico" />
+    <EmbeddedResource Include="Icons\Blank.ico" />
+    <EmbeddedResource Include="Icons\Deutsch.ico" />
+    <EmbeddedResource Include="Icons\Down.ico" />
+    <EmbeddedResource Include="Icons\English.ico" />
+    <EmbeddedResource Include="Icons\Español.ico" />
+    <EmbeddedResource Include="Icons\Français.ico" />
+    <EmbeddedResource Include="Icons\GoodMerge.ico" />
+    <EmbeddedResource Include="Icons\Português.ico" />
+    <EmbeddedResource Include="Icons\Svenska.ico" />
+    <EmbeddedResource Include="Icons\Türkçe.ico" />
+    <EmbeddedResource Include="Icons\Up.ico" />
+    <EmbeddedResource Include="Icons\简体中文.ico" />
+    <EmbeddedResource Include="Icons\繁體中文.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GoodMerge.snk" />
     <None Include="qoop.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Português.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Türkçe.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

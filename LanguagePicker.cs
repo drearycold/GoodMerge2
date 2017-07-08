@@ -23,11 +23,11 @@ namespace GoodMerge {
             // 
             // Populate Tree
             //
-            Images.Images.Add(Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Blank.ico")));
+            Images.Images.Add(Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Icons.Blank.ico")));
             int loop=1;
             foreach (XmlNode xn in xnl) {
                 try {
-                    Images.Images.Add(Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge."+xn.Value+".ico")));
+                    Images.Images.Add(Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Icons."+xn.Value+".ico")));
                     Tree.Nodes.Add(new TreeNode(xn.Value, loop, loop));
                     loop++;
                 }

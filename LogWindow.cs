@@ -381,7 +381,7 @@ namespace GoodMerge {
                 this.Location=options.LogWindowLocation;
             }
             this.Text = options.Strings[0]+" - "+options.SetName+" "+options.Version;
-            this.Icon = new Icon(Assembly.GetExecutingAssembly().GetManifestResourceStream("GoodMerge.GoodMerge.ico"));
+            this.Icon = new Icon(Assembly.GetExecutingAssembly().GetManifestResourceStream("GoodMerge.Icons.GoodMerge.ico"));
             this.Font = NormalFont;
 
             this.SizeChanged += new EventHandler(RepositionElements);

@@ -311,7 +311,7 @@ namespace GoodMerge {
             this.Controls.Add(ButtonBack);
             this.Font = new Font(options.FontName, options.FontSize, FontStyle.Regular, GraphicsUnit.Point, ((Byte)(0)));
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.Icon = new Icon(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.GoodMerge.ico"));
+            this.Icon = new Icon(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Icons.GoodMerge.ico"));
             this.MaximizeBox = false;
             if (options.MainWindowLocation.X==0 && options.MainWindowLocation.Y==0) this.StartPosition = FormStartPosition.CenterScreen;
             else {
@@ -850,14 +850,14 @@ namespace GoodMerge {
             // 
             // ButtonMoveUp
             // 
-            ButtonMoveUp.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Up.ico"));
+            ButtonMoveUp.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Icons.Up.ico"));
             ButtonMoveUp.Location = new Point(204, 24);
             ButtonMoveUp.Size = new Size(17, 28);
             ButtonMoveUp.Click += EventListener;
             // 
             // ButtonMoveDown
             // 
-            ButtonMoveDown.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Down.ico"));
+            ButtonMoveDown.Image = Image.FromStream(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Icons.Down.ico"));
             ButtonMoveDown.Location = new Point(204, 108);
             ButtonMoveDown.Size = new Size(17, 28);
             ButtonMoveDown.Click += EventListener;

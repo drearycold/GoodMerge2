@@ -130,7 +130,7 @@ namespace GoodMerge {
             this.ClientSize = new Size(500, 400);
             this.Controls.Add(this.TextArea);
             this.Font = NormalFont;
-            this.Icon = new Icon(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.GoodMerge.ico"));
+            this.Icon = new Icon(Assembly.GetEntryAssembly().GetManifestResourceStream("GoodMerge.Icons.GoodMerge.ico"));
             this.Text = options.Strings[168];
             this.Resize += new EventHandler(CLIHelpWindow_Resize);
             this.ResumeLayout(false);
