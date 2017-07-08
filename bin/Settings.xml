@@ -28,6 +28,6 @@
   </windows>
   <program sevenzip="C:\Program Files\7-Zip\7za.exe" rar="" ace="" working="F:\bin\" />
   <paths>
-    <setpath source="" have="" output="" name="" />
+    <setpath output="" have="" source="" name="" />
   </paths>
 </settings>
