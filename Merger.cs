@@ -162,7 +162,7 @@ namespace GoodMerge {
             }
             if (!matched) { doError(options.Strings[42]+" \""+options.SetName+"\" ("+options.Strings[43]+" \""+options.Version+"\") "+options.Strings[44]); return; }
 
-            log.AppendText(options.Strings[45]+" \""+file.FullName+"\"… ", LogWindow.GoodColor);
+            log.AppendText(options.Strings[45]+" \""+file.FullName+"\"?", LogWindow.GoodColor);
             string n="";
 
             // Attempt to load the document.
@@ -260,7 +260,7 @@ namespace GoodMerge {
             / against the names already in the hash table.
             /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-            log.AppendText(options.Strings[45]+" \""+options.HaveFile+"\"… ", LogWindow.GoodColor);
+            log.AppendText(options.Strings[45]+" \""+options.HaveFile+"\"?", LogWindow.GoodColor);
    
             matched=false;
             lp = new LineParser(options.HaveFile);
@@ -361,7 +361,7 @@ namespace GoodMerge {
             /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
             coArgMid="-w\"";
-            if (options.OutputCompression=="7z") coArgStart="a -bd -t7z -ms -mmt -m0fb=128 ";
+            if (options.OutputCompression=="7z") coArgStart="a -bd -t7z -ms -mmt -m0=lzma -m0fb=128 ";
             else if (options.OutputCompression=="zip") coArgStart="a -bd -tzip -mx=9 -mfb=128 ";
             else if (options.OutputCompression=="ace") {
                 coArgStart="a -m5 -d4096 -s -c2 -std ";

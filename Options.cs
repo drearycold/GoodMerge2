@@ -199,14 +199,14 @@ namespace GoodMerge {
 
         public void SetDesiredRAM(int d) {
             if (d<0) d=0;
-            else if (d>2498) d=2498;
+            else if (d>6144) d= 6144;
             DesiredRAM = d;
             if (d-65 < 0) UltraDict=0;
             else UltraDict = ((d-65)*2)/19;
-            if (UltraDict > 256) UltraDict = 256;
+            if (UltraDict > 512) UltraDict = 512;
             if (d-8 < 0) MaxDict=0;
             else MaxDict = ((d-8)*2)/19;
-            if (MaxDict > 256) MaxDict = 256;
+            if (MaxDict > 512) MaxDict = 512;
         }
 
         public void Default7Zip() {

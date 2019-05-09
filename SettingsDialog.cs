@@ -643,7 +643,7 @@ namespace GoodMerge {
             // 
             NumericMaximumRAM.Increment = new System.Decimal(9.5);
             NumericMaximumRAM.Location = new Point(8, 24);
-            NumericMaximumRAM.Maximum = new System.Decimal(2498);
+            NumericMaximumRAM.Maximum = new System.Decimal(4996);
             NumericMaximumRAM.Size = new Size(52, 23);
             NumericMaximumRAM.TextAlign = HorizontalAlignment.Right;
             NumericMaximumRAM.UpDownAlign = LeftRightAlignment.Left;
@@ -1050,7 +1050,7 @@ namespace GoodMerge {
             LabelAbout.FlatStyle = FlatStyle.System;
             LabelAbout.Location = new Point(8, 24);
             LabelAbout.Size = new Size(496, 216);
-            LabelAbout.Text = options.Strings[131]+" "+Assembly.GetExecutingAssembly().GetName().Version.ToString()+" - 2006/01/08\nCopyright ©2004-2006 John Paul Taylor II (q^-o|o-^p) - BSD License\n\n"+options.Strings[132]+" kiczek, xphaze, Nebula, [vEX], kn, indigital, romar, kox, BRaiNL3Ss, CANI, Hakkk, accolon, SpkLeader, Bekir HIZ "+options.Strings[145];
+            LabelAbout.Text = options.Strings[131]+" "+Assembly.GetExecutingAssembly().GetName().Version.ToString()+" - 2006/01/08\nCopyright ?004-2006 John Paul Taylor II (q^-o|o-^p) - BSD License\n\n"+options.Strings[132]+" kiczek, xphaze, Nebula, [vEX], kn, indigital, romar, kox, BRaiNL3Ss, CANI, Hakkk, accolon, SpkLeader, Bekir HIZ "+options.Strings[145];
             LabelAbout.UseMnemonic = false;
             // 
             // LinkWebpage
